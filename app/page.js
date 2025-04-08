@@ -1,10 +1,14 @@
 import React from 'react'
-import CurrentWeather from './components/CurrentWeather'
+import Home from './climate-form/page'
+import CurrentWeather from './currentweather/page'
 
 const page = () => {
   return (
-    <div className='bg-[#192735] min-h-screen'>
-      <CurrentWeather/>
+    <div className='bg-[#192735] min-h-screen pt-24'>
+      
+      {/* <Home/> */}
+      {/* <CurrentWeather/> */}
+      <Home/>
        </div>
   )
 }

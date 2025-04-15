@@ -1,18 +1,17 @@
 "use client";
-import { MdHowToVote } from "react-icons/md";
 import { PiSignOut } from "react-icons/pi";
 import { usePathname, useRouter } from "next/navigation";
 import { LuLayoutDashboard } from "react-icons/lu";
-import { MdOutlineCreateNewFolder } from "react-icons/md";
 import { MdManageHistory } from "react-icons/md";
-import { MdOutlineFormatListNumberedRtl } from "react-icons/md";
-import { CiSettings } from "react-icons/ci";
 import axios from "axios";
 import { useAuth } from "@/app/context/authContext";
 import { ToastContainer, toast } from "react-toastify";
+import { MdOutlineCreateNewFolder } from "react-icons/md";
 import { Modal, Button } from "antd";
 import "react-toastify/dist/ReactToastify.css";
 import { useState } from "react";
+import { TiWeatherDownpour } from "react-icons/ti";
+
 
 const Sidebar = () => {
   const pathName = usePathname();
@@ -44,27 +43,20 @@ const Sidebar = () => {
     { id: 1, name: "overview", icon: <LuLayoutDashboard />, path: "/admin" },
     {
       id: 2,
-      name: "create-vote",
+      name: "create-task",
       icon: <MdOutlineCreateNewFolder />,
-      path: "/admin/create-vote",
+      path: "/admin/create-task",
     },
     {
       id: 3,
-      name: "manage-candidate",
+      name: "manage-task",
       icon: <MdManageHistory />,
-      path: "/admin/manage-candidate",
+      path: "/admin/manage-task",
     },
-    {
-      id: 4,
-      name: "result",
-      icon: <MdOutlineFormatListNumberedRtl />,
-      path: "/admin/result",
-    },
-    { id: 5, name: "setting", icon: <CiSettings />, path: "/admin/setting" },
-  ];
+ ];
 
   return (
-    <div className="h-screen w-[250px] max-w-[250px] py-14 flex items-center justify-between gap-8 flex-col min-h-full fixed top-0 bg-[#e57226]">
+    <div className="h-screen w-[250px] max-w-[250px] py-8 flex items-center justify-between gap-8 flex-col min-h-full fixed top-0 bg-[#192735]">
       <ToastContainer
         position="top-center"
         autoClose={3000}
@@ -72,8 +64,8 @@ const Sidebar = () => {
       />
       <div className="flex flex-col gap-10">
         <div className="flex items-center gap-3 ">
-          <MdHowToVote size={30} color="white" />
-          <h1 className="text-white font-bold text-2xl">E-Voting</h1>
+          <TiWeatherDownpour size={30} color="white" />
+          <h1 className="text-white font-bold text-2xl">Weather focast</h1>
         </div>
         <span className="h-1 bg-[#443227] w-full"></span>
         <ul className="space-y-4">

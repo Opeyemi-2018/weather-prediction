@@ -15,7 +15,7 @@ const SignIn = () => {
   const [formData, setFormData] = useState({ email: "", password: "" });
   const [showPassword, setShowPassword] = useState(false);
 
-  // const { login } = useAuth();
+  const { login } = useAuth();
 
   const router = useRouter();
 
@@ -60,10 +60,11 @@ const SignIn = () => {
         "http://localhost:5000/api/auth/sign-in",
         formData
       );
-      // const { token, user } = res.data;
-      // login({ token, user });
+      const { token, user } = res.data;
+      login({ token, user });
       toast.success("successfully logged in");
       router.push("/admin");
+      alert('yes')
     } catch (error) {
       console.log(error.response?.data);
       toast.error(error.response?.data?.msg || "sign in failed");
@@ -136,7 +137,7 @@ const SignIn = () => {
         {/* sign up  */}
         {showSignIn && (
           <div className="max-w-[600px] mx-auto white">
-            <h1 className="text- font-semibold text-2xl capitalize text-center mt-8 mb-5">
+            <h1 className="text-white font-semibold text-2xl capitalize text-center mt-8 mb-5">
               sign up
             </h1>
             <form className=" bg-white p-8 flex flex-col  justify-center gap-6 rounded-md shadow-sm">

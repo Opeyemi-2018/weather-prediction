@@ -56,7 +56,7 @@ const Sidebar = () => {
  ];
 
   return (
-    <div className="h-screen w-[250px] max-w-[250px] py-8 flex items-center justify-between gap-8 flex-col min-h-full fixed top-0 bg-[#192735]">
+    <div className=" w-[250px] max-w-[250px] py-2 flex items-center justify-between gap-8 flex-col min-h-full fixed top-0 bg-[#192735]">
       <ToastContainer
         position="top-center"
         autoClose={3000}

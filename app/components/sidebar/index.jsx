@@ -65,7 +65,7 @@ const Sidebar = () => {
       <div className="flex flex-col gap-10">
         <div className="flex items-center gap-3 ">
           <TiWeatherDownpour size={30} color="white" />
-          <h1 className="text-white font-bold text-2xl">Weather focast</h1>
+          <h1 className="text-white font-bold text-2xl">Weather forecast</h1>
         </div>
         <span className="h-1 bg-[#443227] w-full"></span>
         <ul className="space-y-4">
